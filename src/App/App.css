@@ -3,3 +3,11 @@
 	margin: 0;
 	padding: 0;
 }
+
+html {
+	background-color: #FFFFFF;
+}
+
+h1,h2,h3,p {
+	font-family: 'Poppins', sans-serif;
+}

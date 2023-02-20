@@ -1,9 +1,12 @@
 import './App.css'
 
+import Main from '../views/Main/Main'
+import Header from '../components/Header/Header'
+
 function App() {
   return (
     <div className="App">
-        <h1>Jonrón</h1>
+        <Main />
     </div>
   )
 }
