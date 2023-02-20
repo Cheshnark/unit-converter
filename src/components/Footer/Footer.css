@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+
+    width: 100%;
+    height: 2.44rem;
+
+    background-color: #2E0039;
+
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+
+    color: #FFFFFF;
+}
+
+footer p:hover {
+    cursor: pointer;
+}
