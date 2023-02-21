@@ -1,0 +1,80 @@
+.converter {
+    width: 90%;
+    margin: 1.4rem auto;
+
+    background-color: #2E0039;
+    color: #FFFFFF;
+
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+.converter-container {
+    padding: 0.67rem 1.3rem 1.7rem 1.3rem;
+}
+
+.converter h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+
+    margin-bottom: 1rem;
+}
+
+/* Converter grid */
+.converter-grid {
+    display: grid;
+    align-items:end;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+
+    margin-bottom: 1.2rem;
+}
+
+.converter-grid input,.converter-grid select {
+    background-color: #2E0039;
+    color: #FFFFFF;
+
+    font-size: 0.875rem;
+    line-height: 1.31rem;
+
+    border: 2px;
+    border-style: none none solid none;
+    border-color: #FFFFFF;
+}
+
+.converter-grid i:hover {
+    cursor: pointer;
+}
+
+.converter-grid input {
+    text-align: right;
+}
+
+.converter-grid p {
+    font-size: 0.875rem;
+    line-height: 1.31rem;
+}
+
+/* Converter result */
+.converter-result {
+    display: grid;
+    /* Cambiar lo de abajo a dos columnas y la de la izquierda luego dividirlo en dos con flex o con lo que sea */
+    grid-template-columns: 26% 32% 32%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.converter-result p:nth-child(2) {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    justify-self: end;
+}
+
+.converter-result p:last-child {
+    font-size: 1rem;
+    line-height: 2rem;
+    
+}
+
