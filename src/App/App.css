@@ -8,6 +8,6 @@ html {
 	background-color: #FFFFFF;
 }
 
-h1,h2,h3,p {
+h1,h2,h3,p,input,select {
 	font-family: 'Poppins', sans-serif;
 }
