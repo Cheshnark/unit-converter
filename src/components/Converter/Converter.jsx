@@ -1,11 +1,17 @@
 import './Converter.css'
 import { useState, useEffect } from "react"
 
-const Converter = () => {
+import { postSaved } from '../../fetchFunctions'
+import { getSaved } from '../../fetchFunctions'
+
+const Converter = (props) => {
     const [unit, setUnit] = useState("km")
     const [unitConverted, setUnitConverted] = useState("miles")
     const [value, setValue] = useState(0)
     const [valueConverted, setValueConverted] = useState(0)
+
+    const entry = {value, unit, valueConverted, unitConverted}
+    const changeStatus = props.changeStatus
 
     useEffect(() => {
         convert()
@@ -50,9 +56,7 @@ const Converter = () => {
     }
 
     const switchUnits = () => { 
-        console.log(value, valueConverted)
         const tempValue = value
-        console.log(value, valueConverted)
 
         switch(unit) {
             case("km"):
@@ -117,6 +121,13 @@ const Converter = () => {
             }
             }
 
+    const addEntry = (entry) => {
+        postSaved(entry)
+        getSaved()
+        .then(res => props.updateSave(res))
+        props.changer(!changeStatus)
+    }
+
     return (
         <section className="converter">
             <div className="converter-container">
@@ -143,7 +154,8 @@ const Converter = () => {
                     <p>{unit}</p>
                 </div>
                 <div className="converter-result">
-                    <i className="fa-regular fa-heart"></i>
+                    <i className="fa-regular fa-heart" onClick={() => {addEntry(entry)}}    
+                    ></i>
                     <p>{valueConverted}</p>
                     <p>{unitConverted}</p>
                 </div>

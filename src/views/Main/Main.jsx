@@ -1,36 +1,27 @@
 import './Main.css'
+import { getSaved } from '../../fetchFunctions'
 
 import Header from "../../components/Header/Header"
 import Converter from "../../components/Converter/Converter"
+import Saved from '../../components/Saved/Saved'
 import Footer from "../../components/Footer/Footer"
+import { useEffect, useState } from 'react'
 
 const Main = () => {
-    const saved = [
-        "100 miles es mazo",
-        "rubu",
-        "Siluro",
-        "Bravo Murillo"
-    ]
+    const [saved, setSaved] = useState(null)
+    const [hasChanged, setHasChanged] = useState(false)
+
+    useEffect(() => {
+        getSaved()
+        .then(res => setSaved(res))
+    }, [hasChanged])
 
     return (
     <>
         <Header />
         <main>
-            <Converter />
-            <section className="saved">
-                <h3>saved</h3>
-                <div className="saved-entries">
-                {saved &&
-                    saved.map((entry, i) => {
-                    return (
-                        <div className="entry">
-                            <p>{entry}</p>
-                            <i className="fa-solid fa-xmark"></i>
-                        </div>
-                    )
-                })}
-                </div>
-            </section>
+            <Converter updateSave={setSaved} changer={setHasChanged} changeStatus={hasChanged}/>
+            <Saved saved={saved} updateSave={setSaved} changer={setHasChanged} changeStatus={hasChanged} />
         </main>
         <Footer />      
     </>
