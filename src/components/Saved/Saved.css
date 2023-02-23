@@ -36,3 +36,30 @@
     font-size: 0.8rem;
     color: #676767;
 }
+
+@media (min-width:550px) {
+
+    .saved {
+        width: 75%;
+    }
+
+    .saved-entries {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .entry {
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media (min-width:840px) {
+    .saved {
+        width: 55%;
+    }
+
+    .entry p {
+        padding-left: 1rem;
+    }
+}
