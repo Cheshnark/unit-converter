@@ -59,10 +59,10 @@
 
 /* Converter result */
 .converter-result {
-    display: grid;
-    /* Cambiar lo de abajo a dos columnas y la de la izquierda luego dividirlo en dos con flex o con lo que sea */
-    grid-template-columns: 26% 32% 32%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
     gap: 1rem;
 }
 
@@ -74,7 +74,41 @@
 
 .converter-result p:last-child {
     font-size: 1rem;
-    line-height: 2rem;
-    
+    line-height: 2rem;  
+    margin-right: 14%;
 }
 
+@media (min-width:840px) {
+    .converter {
+        width: 55%;
+        margin-top: 3.2rem;
+    }
+
+    .converter-container {
+        padding: 1.5rem 2.25rem 2.3rem 2.25rem;
+    }
+
+    .converter-container h2 {
+        margin-bottom: 1.44rem;
+    }
+
+    .converter-grid {
+        grid-template-columns: 2fr 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    
+        margin-bottom: 1.2rem;
+    }
+
+    .converter-grid input {
+        margin-left:2rem;
+    }
+
+    .converter-result {
+        margin-top: 1.5rem;
+    }
+
+    .converter-result p:last-child {
+        margin-right: 12%;
+    }
+}

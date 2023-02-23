@@ -156,8 +156,7 @@ const Converter = (props) => {
                 <div className="converter-result">
                     <i className="fa-regular fa-heart" onClick={() => {addEntry(entry)}}    
                     ></i>
-                    <p>{valueConverted}</p>
-                    <p>{unitConverted}</p>
+                    <p>{valueConverted + " " + unitConverted}</p>
                 </div>
             </div>
         </section>
