@@ -19,3 +19,12 @@ header h1 {
     line-height: 1.87rem;
     color: #2E0039;
 }
+@media (min-width:320px) {
+    
+    .header-container {
+        width: 50%;
+        margin: 0 auto;
+
+        box-shadow: none;
+    }
+}
