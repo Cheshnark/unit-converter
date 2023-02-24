@@ -1,6 +1,7 @@
 .saved {
     width: 90%;
-    margin: 1.4rem auto;
+    min-height: 100%;
+    margin: 1.4rem auto 5rem auto;
 }
 
 .saved h3 {

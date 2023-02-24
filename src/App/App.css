@@ -6,6 +6,13 @@
 
 html {
 	background-color: #FFFFFF;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 h1,h2,h3,p,input,select {

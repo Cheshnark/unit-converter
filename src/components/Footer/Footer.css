@@ -8,8 +8,7 @@ footer {
     height: 2.44rem;
 
     background-color: #2E0039;
-
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
